@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dava Games | Rental PlayStation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Logo Dava Games"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="harga.html">Harga Sewa</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1><span class="text-pink">DAVA</span> <span class="text-cyan">GAMES</span></h1>
+            <p>Pusat penyewaan PlayStation terbaik. Mainkan *game* favoritmu di rumah dengan konsol berkualitas tinggi kami.</p>
+            <a href="harga.html" class="btn">Lihat Konsol</a>
+        </div>
+    </section>
+
+    <section id="harga" class="pricing">
+        <h2>Pilihan Konsol</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="image/ps3.png" alt="PS3" class="konsol-img">
+                
+                <h3>PlayStation 3</h3>
+                <p class="price">Rp 6.000 <span>/ jam</span></p>
+                <ul>
+                    <li>2 DualSense Controller</li>
+                    <li>TV 32 inc</li>
+                    <li>Tingkatan Epic</li>
+                </ul>
+                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps3'">List Game PS3</button>
+            </div>
+            
+            <div class="card">
+                <img src="image/ps4.png" alt="PS4" class="konsol-img">
+
+                <h3>PlayStation 4</h3>
+                <p class="price">Rp 10.000 <span>/ jam</span></p>
+                <ul>
+                    <li>2 DualSense Controller</li>
+                    <li>TV 43 inc</li>
+                    <li>Tingkatan Legend</li>
+                </ul>
+                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps4'">List Game PS4</button>
+            </div>
+
+            <div class="card">
+                <img src="image/ps5.png" alt="PS5" class="konsol-img">
+
+                <h3>PlayStation 5</h3>
+                <p class="price">Rp 15.000 <span>/ jam</span></p>
+                <ul>
+                    <li>2 DualSense Controller</li>
+                    <li>TV 55 inc</li>
+                    <li>Tingkatan Mythic</li>
+                </ul>
+                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps5'">List Game PS5</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="location">
+        <h2>Lokasi Kami</h2>
+        <p>Jl. Inerbang Raya No.25, RT.10/RW.3, Batu Ampar, Kec. Kramat Jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13520</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8606044359303!2d106.85907677475114!3d-6.282049193706825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f30065148895%3A0x365ca742fe2c7e9e!2sDava%20Games!5e0!3m2!1sid!2sid!4v1778039873879!5m2!1sid!2sid" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="image/logo.png" alt="Logo Dava Games" class="footer-logo">
+                <h2 class="footer-tagline"><span class="text-pink">LEVEL UP</span><br><span class="text-cyan">YOUR GAME</span></h2>
+            </div>
+
+            <div class="footer-col">
+                <div class="contact-item">
+                    <h4>📍 Office</h4>
+                    <p>Jl. Inerbang Raya No.25,<br>RT.10/RW.3, Batu Ampar,<br>Kec. Kramat Jati, Kota Jakarta Timur,<br>Daerah Khusus Ibukota Jakarta 13520</p>
+                </div>
+                
+                <div class="contact-item mt-3">
+                    <h4>⏰ Jam Operasional</h4>
+                    <p style="white-space: nowrap;">Senin - Jumat: 13.00 - 18.00 WIB | Sabtu - Minggu: 10.00 - 19.00 WIB</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="contact-item">
+                    <h4>✉️ Email</h4>
+                    <p>kemendage@gmail.com</p>
+                </div>
+                <div class="contact-item mt-3">
+                    <h4>📸 Instagram</h4>
+                    <p>@davagames.id</p>
+                </div>
+            </div>
+
+            <div class="footer-col payment-col">
+                <h4>Payment Partners</h4>
+                <div class="payment-logos">
+                    <img src="image/qris_logo.png" alt="QRIS" class="pay-img">
+                    <img src="image/bca.png" alt="BCA" class="pay-img">
+                    <img src="image/mandiri.png" alt="Mandiri" class="pay-img">
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dava Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
