@@ -1,0 +1,690 @@
+/* Reset & Tema Warna dari Logo */
+:root {
+    --hitam-pekat: #000000;
+    --abu-gelap: #111111;
+    --biru-cyan: #00b4ff; /* Diambil dari tulisan GAMES */
+    --pink-neon: #ff66cc; /* Diambil dari tulisan DAVA */
+    --teks-putih: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--hitam-pekat);
+    color: var(--teks-putih);
+    line-height: 1.6;
+}
+
+/* Pewarnaan Teks Khusus */
+.text-pink { color: var(--pink-neon); }
+.text-cyan { color: var(--biru-cyan); }
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--biru-cyan);
+    transition: all 0.4s ease; /* Efek halus saat padding berubah */
+}
+
+.logo img {
+    height: 80px; /* Ukuran awal saat di paling atas */
+    width: auto;
+    display: block;
+    transition: height 0.4s ease; /* Efek halus saat logo mengecil/membesar */
+}
+
+/* Class tambahan saat layar di-scroll ke bawah */
+nav.nav-scrolled {
+    padding: 5px 50px; /* Padding atas bawah mengecil */
+    background-color: rgba(0, 0, 0, 0.98); /* Warna background sedikit lebih pekat */
+}
+
+nav.nav-scrolled .logo img {
+    height: 60px; /* Logo mengecil saat di-scroll */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--teks-putih);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink-neon);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Efek gelap di background agar teks terbaca jelas */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070') center/cover;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5); /* Efek cahaya */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #cccccc;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--pink-neon), var(--biru-cyan));
+    color: var(--teks-putih);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--biru-cyan);
+}
+
+/* Pricing Section */
+.pricing, .location {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.pricing h2, .location h2 {
+    margin-bottom: 40px;
+    color: var(--biru-cyan);
+    font-size: 2.5rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--abu-gelap);
+    padding: 30px;
+    padding-top: 90px; /* DIBESARKAN: Memberi ruang ekstra agar teks tidak tertabrak gambar */
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-top: 50px; /* TAMBAHAN: Memberi jarak dari judul "Pilihan Konsol" ke kotak */
+}
+
+/* Efek menyala saat mouse diarahkan ke kotak harga */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--pink-neon);
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.3);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--teks-putih);
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--pink-neon);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+.btn-pesan {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366; 
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-pesan:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+}
+
+/* Lokasi */
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--biru-cyan);
+}
+
+/* --- UPDATE FOOTER 4 KOLOM --- */
+footer {
+    background-color: var(--abu-gelap);
+    padding: 60px 50px 20px; /* Padding diperbesar agar luas */
+    border-top: 1px solid #333;
+    color: var(--teks-putih);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr; /* Membagi menjadi 4 kolom, kolom pertama sedikit lebih lebar */
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left; /* Teks rata kiri seperti contoh Bobobox */
+}
+
+/* Styling Judul Tiap Kolom */
+.footer-col h4 {
+    color: var(--teks-putih);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-col p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Kolom 1 (Brand) */
+.footer-logo {
+    height: 70px; /* Ukuran logo di footer */
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.contact-item.mt-3 {
+    margin-top: 20px;
+}
+
+/* Styling Payment Partners (Gaya Label/Logo) */
+.payment-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pay-badge {
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    background-color: #ffffff; /* Latar putih agar warna logo asli terlihat */
+    display: inline-block;
+}
+
+/* Styling Payment Partners (Menggunakan Gambar) */
+.payment-logos {
+    display: flex;
+    gap: 15px; /* Jarak antar logo bank */
+    flex-wrap: wrap;
+    align-items: center; /* Memastikan logo sejajar di tengah secara vertikal */
+}
+
+.pay-img {
+    height: 30px; /* Atur tinggi gambar logo di sini. Ubah angka ini jika logo terlalu besar/kecil */
+    width: auto;
+    object-fit: contain;
+    background-color: white; /* Memberi latar putih (opsional, bagus jika logo bank-nya gelap) */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Copyright Bawah */
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #666666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* --- RESPONSIF UNTUK HP --- */
+@media (max-width: 900px) {
+    /* Jika dibuka di layar kecil/HP, jadikan 1 baris ke bawah */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .footer-col h4 {
+        justify-content: center;
+    }
+
+    .payment-logos {
+        justify-content: center;
+    }
+}
+
+/* --- UPDATE PADA GAMBAR KONSOL --- */
+.konsol-img {
+    position: absolute;
+    height: 140px; /* KITA GUNAKAN HEIGHT: Agar tinggi PS3, PS4, dan PS5 sama rata */
+    width: auto;   /* Lebar akan menyesuaikan proporsi asli secara otomatis */
+    top: -70px;    /* Ditarik lebih tinggi ke atas menembus batas kotak */
+    z-index: 10;
+    transition: transform 0.3s ease;
+    /* Opsional: Menambahkan sedikit bayangan agar efek 3D lebih terasa */
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8)); 
+}
+
+/* --- UPDATE PADA GAMBAR KONSOL --- */
+.konsol-img {
+    position: absolute;
+    height: 140px; 
+    width: auto;   
+    top: -70px;    
+    
+    /* Tambahan kode untuk mengetengahkan SEMUA gambar */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    z-index: 10;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8)); 
+}
+
+/* HAPUS kode .img-ps3, .img-ps4, .img-ps5 yang lama karena sekarang semuanya di tengah */
+
+/* --- UPDATE EFEK ANIMASI MELAYANG --- */
+/* Sekarang efek animasinya dibuat sama untuk semua konsol */
+.card:hover .konsol-img {
+    /* Tetap di tengah (-50%), lalu naik ke atas (-10px), dan sedikit membesar (scale) */
+    transform: translate(-50%, -10px) scale(1.05); 
+}
+
+/* =========================================
+   STYLE KHUSUS HALAMAN KATALOG GAME 
+   ========================================= */
+
+.filter-section {
+    background-color: var(--abu-gelap);
+    padding: 30px 50px;
+    border-bottom: 1px solid #333;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-box, .search-box {
+    background-color: #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-box label {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.filter-box select, .search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box {
+    background-color: #333;
+}
+
+.search-icon {
+    background-color: #ffcc00; /* Warna kuning khas tombol search PS */
+    color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Grid Katalog Game */
+.game-katalog {
+    padding: 40px 50px 80px;
+    min-height: 50vh;
+}
+
+.game-grid {
+    display: grid;
+    /* Grid otomatis menyesuaikan layar, minimal lebar card 220px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.game-card-item {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.2);
+}
+
+.game-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Rasio standar cover game */
+    object-fit: cover;
+    display: block;
+}
+
+/* Efek gradasi hitam di bawah cover game untuk teks */
+.game-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 15px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+}
+
+.game-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+    /* Membuat teks yang terlalu panjang jadi titik-titik (...) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge {
+    font-size: 0.7rem;
+    background-color: white;
+    color: black;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Badge khusus PS5 warna putih, PS4 warna biru, PS3 warna hitam */
+.badge.ps5 { background-color: white; color: black; }
+.badge.ps4 { background-color: #00439c; color: white; }
+.badge.ps3 { background-color: #333; color: white; border: 1px solid #666; }
+
+/* --- STYLE HALAMAN HARGA --- */
+.harga-header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header-icon {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.harga-header h1 {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.harga-header p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--biru-cyan);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Home Rental Layout (Foto 3) */
+.home-rental {
+    padding: 50px;
+    background-color: #000;
+}
+
+.home-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.home-card {
+    background-color: #1e1e1e;
+    border-radius: 30px;
+    padding: 30px;
+    width: 320px;
+    border: 2px solid #333;
+    position: relative;
+}
+
+.home-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.home-card-header h3 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.home-card-header span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.price-pill {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border: 1px solid var(--biru-cyan);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-pill:hover {
+    background-color: var(--biru-cyan);
+    color: black;
+}
+
+/* Highlight PS 5 */
+.best-seller {
+    background-color: #ffcc00; /* Warna kuning seperti di foto */
+    transform: scale(1.1);
+    z-index: 5;
+    border: none;
+}
+
+.best-seller .home-card-header h3, 
+.best-seller .home-card-header span {
+    color: black;
+}
+
+.best-seller .price-pill {
+    background-color: black;
+    color: #ffcc00;
+    border: none;
+}
+
+.badge-terbaik {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   9. RESPONSIVE DESIGN (UNTUK HP & TABLET)
+   ========================================= */
+
+/* Aturan ini HANYA akan aktif jika lebar layar 768px ke bawah (seukuran HP/Tablet) */
+@media (max-width: 768px) {
+    
+    /* 1. Navigasi & Logo */
+    nav {
+        padding: 15px 20px;
+        flex-direction: column; /* Menumpuk logo di atas, menu di bawah */
+        gap: 15px;
+        height: auto; 
+    }
+    nav.small {
+        height: auto;
+        padding: 10px 20px;
+    }
+    .logo img {
+        height: 40px; /* Mengecilkan logo di HP */
+    }
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* 2. Halaman Beranda (Hero & Teks) */
+    .hero {
+        margin-top: 80px; /* Memberi jarak karena navbar menumpuk */
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Mengecilkan teks raksasa */
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* 3. Mengurangi Jarak Pinggir (Padding) */
+    /* Sebelumnya 50px (terlalu lebar buat HP), sekarang jadi 20px */
+    .pricing, .location, .home-rental, .harga-header, 
+    .filter-section, .game-katalog, footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* 4. Menyesuaikan Ukuran Kotak Harga */
+    .card, .home-card {
+        width: 100%;
+        max-width: 320px; /* Kotak akan mengecil otomatis mengikuti layar */
+    }
+    .cards {
+        margin-top: 50px;
+    }
+    .konsol-img {
+        height: 110px; /* Mengecilkan gambar konsol melayang */
+        top: -55px;
+    }
+
+    /* 5. Halaman Harga */
+    .harga-header {
+        margin-top: 140px; /* Jarak ekstra dari navbar */
+    }
+    .harga-header h1 {
+        font-size: 3rem;
+    }
+
+    /* 6. Footer (Memaksa jadi 1 baris ke bawah) */
+    .footer-container {
+        grid-template-columns: 1fr; /* Jadi 1 kolom bertumpuk */
+        text-align: center; /* Teks otomatis ke tengah */
+        gap: 30px;
+    }
+    .footer-col h4 {
+        justify-content: center;
+    }
+    .payment-logos {
+        justify-content: center;
+    }
+    .contact-item p {
+        white-space: normal !important; /* Teks jam operasional boleh turun ke bawah di HP */
+    }
+}
