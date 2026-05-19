@@ -1,9 +1,11 @@
-/* Reset & Tema Warna dari Logo */
+/* =========================================
+   1. RESET & TEMA WARNA DAVA GAMES
+   ========================================= */
 :root {
     --hitam-pekat: #000000;
     --abu-gelap: #111111;
-    --biru-cyan: #00b4ff; /* Diambil dari tulisan GAMES */
-    --pink-neon: #ff66cc; /* Diambil dari tulisan DAVA */
+    --biru-cyan: #00b4ff;
+    --pink-neon: #ff66cc;
     --teks-putih: #ffffff;
 }
 
@@ -21,11 +23,12 @@ body {
     line-height: 1.6;
 }
 
-/* Pewarnaan Teks Khusus */
 .text-pink { color: var(--pink-neon); }
 .text-cyan { color: var(--biru-cyan); }
 
-/* Navigasi */
+/* =========================================
+   2. NAVIGASI (NAVBAR)
+   ========================================= */
 nav {
     display: flex;
     justify-content: space-between;
@@ -36,24 +39,23 @@ nav {
     top: 0;
     z-index: 1000;
     border-bottom: 2px solid var(--biru-cyan);
-    transition: all 0.4s ease; /* Efek halus saat padding berubah */
+    transition: all 0.4s ease;
 }
 
 .logo img {
-    height: 80px; /* Ukuran awal saat di paling atas */
+    height: 80px;
     width: auto;
     display: block;
-    transition: height 0.4s ease; /* Efek halus saat logo mengecil/membesar */
+    transition: height 0.4s ease;
 }
 
-/* Class tambahan saat layar di-scroll ke bawah */
 nav.nav-scrolled {
-    padding: 5px 50px; /* Padding atas bawah mengecil */
-    background-color: rgba(0, 0, 0, 0.98); /* Warna background sedikit lebih pekat */
+    padding: 5px 50px;
+    background-color: rgba(0, 0, 0, 0.98);
 }
 
 nav.nav-scrolled .logo img {
-    height: 60px; /* Logo mengecil saat di-scroll */
+    height: 60px;
 }
 
 .nav-links {
@@ -73,14 +75,15 @@ nav.nav-scrolled .logo img {
     color: var(--pink-neon);
 }
 
-/* Hero Section */
+/* =========================================
+   3. HERO SECTION (BERANDA)
+   ========================================= */
 .hero {
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* Efek gelap di background agar teks terbaca jelas */
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070') center/cover;
     padding: 0 20px;
 }
@@ -88,7 +91,7 @@ nav.nav-scrolled .logo img {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5); /* Efek cahaya */
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
 }
 
 .hero p {
@@ -114,7 +117,9 @@ nav.nav-scrolled .logo img {
     box-shadow: 0 0 15px var(--biru-cyan);
 }
 
-/* Pricing Section */
+/* =========================================
+   4. SEWA DI TEMPAT (KOTAK HARGA PER JAM)
+   ========================================= */
 .pricing, .location {
     padding: 80px 50px;
     text-align: center;
@@ -130,22 +135,21 @@ nav.nav-scrolled .logo img {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Jurus Fleksibel 1 */
 }
 
 .card {
     background-color: var(--abu-gelap);
-    padding: 30px;
-    padding-top: 90px; /* DIBESARKAN: Memberi ruang ekstra agar teks tidak tertabrak gambar */
+    padding: 90px 30px 30px; 
     border-radius: 15px;
-    width: 300px;
+    width: 100%;             /* Jurus Fleksibel 2 */
+    max-width: 300px;        /* Jurus Fleksibel 2 */
     border: 1px solid #333;
     transition: all 0.3s ease;
     position: relative;
-    margin-top: 50px; /* TAMBAHAN: Memberi jarak dari judul "Pilihan Konsol" ke kotak */
+    margin-top: 50px; 
 }
 
-/* Efek menyala saat mouse diarahkan ke kotak harga */
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--pink-neon);
@@ -200,169 +204,141 @@ nav.nav-scrolled .logo img {
     transform: scale(1.05);
 }
 
-/* Lokasi */
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid var(--biru-cyan);
-}
-
-/* --- UPDATE FOOTER 4 KOLOM --- */
-footer {
-    background-color: var(--abu-gelap);
-    padding: 60px 50px 20px; /* Padding diperbesar agar luas */
-    border-top: 1px solid #333;
-    color: var(--teks-putih);
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1fr; /* Membagi menjadi 4 kolom, kolom pertama sedikit lebih lebar */
-    gap: 30px;
-    margin-bottom: 40px;
-    text-align: left; /* Teks rata kiri seperti contoh Bobobox */
-}
-
-/* Styling Judul Tiap Kolom */
-.footer-col h4 {
-    color: var(--teks-putih);
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-col p {
-    color: #aaaaaa;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 5px;
-}
-
-/* Kolom 1 (Brand) */
-.footer-logo {
-    height: 70px; /* Ukuran logo di footer */
-    width: auto;
-    margin-bottom: 20px;
-}
-
-.footer-tagline {
-    font-size: 2rem;
-    line-height: 1.1;
-    letter-spacing: 1px;
-}
-
-.contact-item.mt-3 {
-    margin-top: 20px;
-}
-
-/* Styling Payment Partners (Gaya Label/Logo) */
-.payment-logos {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.pay-badge {
-    padding: 6px 15px;
-    border-radius: 5px;
-    font-weight: 900;
-    font-size: 0.9rem;
-    background-color: #ffffff; /* Latar putih agar warna logo asli terlihat */
-    display: inline-block;
-}
-
-/* Styling Payment Partners (Menggunakan Gambar) */
-.payment-logos {
-    display: flex;
-    gap: 15px; /* Jarak antar logo bank */
-    flex-wrap: wrap;
-    align-items: center; /* Memastikan logo sejajar di tengah secara vertikal */
-}
-
-.pay-img {
-    height: 30px; /* Atur tinggi gambar logo di sini. Ubah angka ini jika logo terlalu besar/kecil */
-    width: auto;
-    object-fit: contain;
-    background-color: white; /* Memberi latar putih (opsional, bagus jika logo bank-nya gelap) */
-    padding: 5px;
-    border-radius: 5px;
-}
-
-/* Copyright Bawah */
-.footer-bottom {
-    text-align: center;
-    padding-top: 25px;
-    border-top: 1px solid #333;
-}
-
-.footer-bottom p {
-    color: #666666;
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-/* --- RESPONSIF UNTUK HP --- */
-@media (max-width: 900px) {
-    /* Jika dibuka di layar kecil/HP, jadikan 1 baris ke bawah */
-    .footer-container {
-        grid-template-columns: 1fr; 
-        text-align: center;
-        gap: 40px;
-    }
-    
-    .footer-col h4 {
-        justify-content: center;
-    }
-
-    .payment-logos {
-        justify-content: center;
-    }
-}
-
-/* --- UPDATE PADA GAMBAR KONSOL --- */
-.konsol-img {
-    position: absolute;
-    height: 140px; /* KITA GUNAKAN HEIGHT: Agar tinggi PS3, PS4, dan PS5 sama rata */
-    width: auto;   /* Lebar akan menyesuaikan proporsi asli secara otomatis */
-    top: -70px;    /* Ditarik lebih tinggi ke atas menembus batas kotak */
-    z-index: 10;
-    transition: transform 0.3s ease;
-    /* Opsional: Menambahkan sedikit bayangan agar efek 3D lebih terasa */
-    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8)); 
-}
-
-/* --- UPDATE PADA GAMBAR KONSOL --- */
+/* Gambar Konsol Melayang (Kode Dobel Sudah Dihapus) */
 .konsol-img {
     position: absolute;
     height: 140px; 
     width: auto;   
     top: -70px;    
-    
-    /* Tambahan kode untuk mengetengahkan SEMUA gambar */
     left: 50%;
     transform: translateX(-50%);
-    
     z-index: 10;
     transition: transform 0.3s ease;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8)); 
 }
 
-/* HAPUS kode .img-ps3, .img-ps4, .img-ps5 yang lama karena sekarang semuanya di tengah */
-
-/* --- UPDATE EFEK ANIMASI MELAYANG --- */
-/* Sekarang efek animasinya dibuat sama untuk semua konsol */
 .card:hover .konsol-img {
-    /* Tetap di tengah (-50%), lalu naik ke atas (-10px), dan sedikit membesar (scale) */
     transform: translate(-50%, -10px) scale(1.05); 
 }
 
 /* =========================================
-   STYLE KHUSUS HALAMAN KATALOG GAME 
+   5. HALAMAN HARGA & SEWA KE RUMAH
    ========================================= */
+.harga-header {
+    text-align: center;
+    padding: 50px 20px;
+}
 
+.harga-header h1 {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.harga-header p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--biru-cyan);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.home-rental {
+    padding: 50px;
+    background-color: #000;
+}
+
+.home-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Jurus Fleksibel 1 */
+}
+
+.home-card {
+    background-color: #1e1e1e;
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;             /* Jurus Fleksibel 2 */
+    max-width: 320px;        /* Jurus Fleksibel 2 */
+    border: 2px solid #333;
+    position: relative;
+}
+
+.home-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.home-card-header h3 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.home-card-header span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.price-pill {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border: 1px solid var(--biru-cyan);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-pill:hover {
+    background-color: var(--biru-cyan);
+    color: black;
+}
+
+.best-seller {
+    background-color: #ffcc00; 
+    transform: scale(1.1);
+    z-index: 5;
+    border: none;
+}
+
+.best-seller .home-card-header h3, 
+.best-seller .home-card-header span {
+    color: black;
+}
+
+.best-seller .price-pill {
+    background-color: black;
+    color: #ffcc00;
+    border: none;
+}
+
+.badge-terbaik {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   6. HALAMAN KATALOG GAME (FRONT-END)
+   ========================================= */
 .filter-section {
     background-color: var(--abu-gelap);
     padding: 30px 50px;
@@ -406,7 +382,7 @@ footer {
 }
 
 .search-icon {
-    background-color: #ffcc00; /* Warna kuning khas tombol search PS */
+    background-color: #ffcc00; 
     color: black;
     border-radius: 50%;
     width: 30px;
@@ -417,7 +393,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Grid Katalog Game */
 .game-katalog {
     padding: 40px 50px 80px;
     min-height: 50vh;
@@ -425,7 +400,6 @@ footer {
 
 .game-grid {
     display: grid;
-    /* Grid otomatis menyesuaikan layar, minimal lebar card 220px */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 25px;
 }
@@ -446,12 +420,11 @@ footer {
 
 .game-cover {
     width: 100%;
-    aspect-ratio: 3 / 4; /* Rasio standar cover game */
+    aspect-ratio: 3 / 4; 
     object-fit: cover;
     display: block;
 }
 
-/* Efek gradasi hitam di bawah cover game untuk teks */
 .game-info-overlay {
     position: absolute;
     bottom: 0;
@@ -466,7 +439,6 @@ footer {
     margin-bottom: 8px;
     color: white;
     font-weight: bold;
-    /* Membuat teks yang terlalu panjang jadi titik-titik (...) */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -482,209 +454,158 @@ footer {
     margin-right: 5px;
 }
 
-/* Badge khusus PS5 warna putih, PS4 warna biru, PS3 warna hitam */
 .badge.ps5 { background-color: white; color: black; }
 .badge.ps4 { background-color: #00439c; color: white; }
 .badge.ps3 { background-color: #333; color: white; border: 1px solid #666; }
 
-/* --- STYLE HALAMAN HARGA --- */
-.harga-header {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.header-icon {
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-.harga-header h1 {
-    font-size: 5rem;
-    color: white;
-    font-family: 'Arial Black', sans-serif;
-}
-
-.harga-header p {
-    color: #ccc;
-    font-size: 1.2rem;
-}
-
-.section-title {
-    text-align: center;
-    color: var(--biru-cyan);
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
-/* Home Rental Layout (Foto 3) */
-.home-rental {
-    padding: 50px;
-    background-color: #000;
-}
-
-.home-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.home-card {
-    background-color: #1e1e1e;
-    border-radius: 30px;
-    padding: 30px;
-    width: 320px;
-    border: 2px solid #333;
-    position: relative;
-}
-
-.home-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.home-card-header h3 {
-    font-size: 2.5rem;
-    color: white;
-}
-
-.home-card-header span {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.price-pill {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    border-radius: 50px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-    border: 1px solid var(--biru-cyan);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.price-pill:hover {
-    background-color: var(--biru-cyan);
-    color: black;
-}
-
-/* Highlight PS 5 */
-.best-seller {
-    background-color: #ffcc00; /* Warna kuning seperti di foto */
-    transform: scale(1.1);
-    z-index: 5;
-    border: none;
-}
-
-.best-seller .home-card-header h3, 
-.best-seller .home-card-header span {
-    color: black;
-}
-
-.best-seller .price-pill {
-    background-color: black;
-    color: #ffcc00;
-    border: none;
-}
-
-.badge-terbaik {
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px 20px;
+/* =========================================
+   7. LOKASI PETA
+   ========================================= */
+.map-container {
+    margin-top: 20px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: 0.8rem;
+    overflow: hidden;
+    border: 2px solid var(--biru-cyan);
 }
 
 /* =========================================
-   9. RESPONSIVE DESIGN (UNTUK HP & TABLET)
+   8. FOOTER 4 KOLOM
    ========================================= */
+footer {
+    background-color: var(--abu-gelap);
+    padding: 60px 50px 20px; 
+    border-top: 1px solid #333;
+    color: var(--teks-putih);
+}
 
-/* Aturan ini HANYA akan aktif jika lebar layar 768px ke bawah (seukuran HP/Tablet) */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr; 
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left; 
+}
+
+.footer-col h4 {
+    color: var(--teks-putih);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-col p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.footer-logo {
+    height: 70px; 
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.contact-item.mt-3 {
+    margin-top: 20px;
+}
+
+.payment-logos {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.pay-img {
+    height: 30px; 
+    width: auto;
+    object-fit: contain;
+    background-color: white; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #666666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* =========================================
+   9. RESPONSIVE DESIGN (HANDPHONE & TABLET)
+   ========================================= */
+@media (max-width: 900px) {
+    /* Tablet: Footer berubah jadi 1 kolom agar tidak terlalu sempit */
+    .footer-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-col h4 { justify-content: center; }
+    .payment-logos { justify-content: center; }
+}
+
 @media (max-width: 768px) {
-    
-    /* 1. Navigasi & Logo */
+    /* --- 1. Navigasi (Tetap Menyamping Sebaris) --- */
     nav {
         padding: 15px 20px;
-        flex-direction: column; /* Menumpuk logo di atas, menu di bawah */
-        gap: 15px;
-        height: auto; 
+        flex-direction: row; /* Memaksa tetap menyamping seperti desktop */
+        justify-content: space-between;
+        gap: 0;
     }
-    nav.small {
-        height: auto;
-        padding: 10px 20px;
-    }
-    .logo img {
-        height: 40px; /* Mengecilkan logo di HP */
-    }
-    .nav-links {
-        gap: 15px;
-        font-size: 0.9rem;
+    
+    /* Memperkecil padding saat di-scroll di HP */
+    nav.nav-scrolled {
+        padding: 8px 20px; 
     }
 
-    /* 2. Halaman Beranda (Hero & Teks) */
-    .hero {
-        margin-top: 80px; /* Memberi jarak karena navbar menumpuk */
+    .logo img { 
+        height: 35px; /* Logo diperkecil agar ruang teks lebih lega */
     }
-    .hero h1 {
-        font-size: 2.5rem; /* Mengecilkan teks raksasa */
-    }
-    .hero p {
-        font-size: 1rem;
+    
+    nav.nav-scrolled .logo img {
+        height: 30px;
     }
 
-    /* 3. Mengurangi Jarak Pinggir (Padding) */
-    /* Sebelumnya 50px (terlalu lebar buat HP), sekarang jadi 20px */
-    .pricing, .location, .home-rental, .harga-header, 
-    .filter-section, .game-katalog, footer {
+    .nav-links { 
+        gap: 15px; /* Jarak antar menu sedikit dirapatkan */
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem; /* Ukuran teks disesuaikan agar tidak turun ke bawah */
+    }
+    .logo img { height: 40px; }
+    .nav-links { font-size: 0.9rem; gap: 15px;}
+    
+    .hero { margin-top: 80px; }
+    .hero h1 { font-size: 2.5rem; }
+    
+    .pricing, .location, .home-rental, .filter-section, .game-katalog, footer {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    /* 4. Menyesuaikan Ukuran Kotak Harga */
-    .card, .home-card {
-        width: 100%;
-        max-width: 320px; /* Kotak akan mengecil otomatis mengikuti layar */
-    }
-    .cards {
-        margin-top: 50px;
-    }
+    .cards { margin-top: 50px; }
     .konsol-img {
-        height: 110px; /* Mengecilkan gambar konsol melayang */
+        height: 110px; 
         top: -55px;
     }
 
-    /* 5. Halaman Harga */
-    .harga-header {
-        margin-top: 140px; /* Jarak ekstra dari navbar */
-    }
-    .harga-header h1 {
-        font-size: 3rem;
-    }
-
-    /* 6. Footer (Memaksa jadi 1 baris ke bawah) */
-    .footer-container {
-        grid-template-columns: 1fr; /* Jadi 1 kolom bertumpuk */
-        text-align: center; /* Teks otomatis ke tengah */
-        gap: 30px;
-    }
-    .footer-col h4 {
-        justify-content: center;
-    }
-    .payment-logos {
-        justify-content: center;
-    }
-    .contact-item p {
-        white-space: normal !important; /* Teks jam operasional boleh turun ke bawah di HP */
-    }
+    .harga-header { margin-top: 140px; }
+    .harga-header h1 { font-size: 3rem; }
 }
