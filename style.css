@@ -17,10 +17,12 @@
     scroll-behavior: smooth;
 }
 
-body {
+html, body {
     background-color: var(--hitam-pekat);
     color: var(--teks-putih);
     line-height: 1.6;
+    overflow-x: hidden; /* Mencegah halaman bisa digeser/zoom ke samping */
+    width: 100%;
 }
 
 .text-pink { color: var(--pink-neon); }
@@ -84,8 +86,12 @@ nav.nav-scrolled .logo img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070') center/cover;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('image/ps5-hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 0 20px;
+    width: 100%;
 }
 
 .hero h1 {
@@ -544,6 +550,63 @@ footer {
     color: #666666;
     font-size: 0.9rem;
     margin: 0;
+}
+
+/* =========================================
+   HALAMAN SYARAT & KETENTUAN (TEKS)
+   ========================================= */
+.page-content {
+    padding: 140px 50px 80px; /* Jarak aman dari navbar yang lengket di atas */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-box {
+    background-color: var(--abu-gelap);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    line-height: 1.8;
+}
+
+.text-box h3 {
+    color: var(--pink-neon);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.text-box ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.text-box p {
+    color: #ddd;
+}
+
+.contact-box {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--biru-cyan);
+    margin-top: 20px;
+}
+
+.contact-box p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: var(--teks-putih);
+}
+
+/* Responsif untuk layar HP khusus halaman S&K */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 120px 20px 50px;
+    }
+    .text-box {
+        padding: 25px;
+    }
 }
 
 /* =========================================
