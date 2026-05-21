@@ -77,6 +77,78 @@ const gamesData = [
         img: "image/listgame/Undisputed.jpg" 
     },
     { 
+        title: "PES Bitbox 2026", 
+        console: ["ps4"], 
+        genre: "sports", 
+        img: "image/listgame/Ps4-Pesbitbpx.jpeg" 
+    },
+    { 
+        title: "It Takes Two", 
+        console: ["ps4"], 
+        genre: "adventure", 
+        img: "image/listgame/ps4-Ittakestwo.png" 
+    },
+    { 
+        title: "Naruto Ultimate Ninja Storm 4", 
+        console: ["ps4"], 
+        genre: "Action", 
+        img: "image/listgame/ps4-narutostorm4.jpg" 
+    },
+    { 
+        title: "Ultraman FE 3", 
+        console: ["ps4"], 
+        genre: "Action", 
+        img: "image/listgame/ps4-Ultramanfe3.jpg" 
+    },
+    { 
+        title: "Call Of Duty Modern Warfare", 
+        console: ["ps4"], 
+        genre: "action", 
+        img: "image/listgame/ps4-Codmw.jpg" 
+    },
+    { 
+        title: "Dragonball Xenoverse", 
+        console: ["ps4"], 
+        genre: "fighting", 
+        img: "image/listgame/ps4-dragonball.jpg" 
+    },
+    { 
+        title: "Unravel 2", 
+        console: ["ps4"], 
+        genre: "adventure", 
+        img: "image/listgame/ps4-Unravel2.jpg" 
+    },
+    { 
+        title: "Minecraft", 
+        console: ["ps3", "ps4"], 
+        genre: "adventure", 
+        img: "image/listgame/minecraft.png" 
+    },
+    { 
+        title: "WWE", 
+        console: ["ps3", "ps4"], 
+        genre: "fighting", 
+        img: "image/listgame/ps4-wwe.jpg" 
+    },
+    { 
+        title: "CTR", 
+        console: ["ps4"], 
+        genre: "racing", 
+        img: "image/listgame/ps4-Ctr.jpg" 
+    },
+    { 
+        title: "PES Gembox", 
+        console: ["ps3"], 
+        genre: "sports", 
+        img: "image/listgame/ps3-Pesgembox.jpg" 
+    },
+    { 
+        title: "Sengoku Basara", 
+        console: ["ps3"], 
+        genre: "action", 
+        img: "image/listgame/ps3-basara.png" 
+    },
+    { 
         title: "", 
         console: ["ps5"], 
         genre: "", 

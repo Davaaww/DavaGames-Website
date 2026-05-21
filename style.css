@@ -4,8 +4,8 @@
 :root {
     --hitam-pekat: #000000;
     --abu-gelap: #111111;
-    --biru-cyan: #00b4ff;
-    --pink-neon: #ff66cc;
+    --biru-cyan: #00b4ff; 
+    --pink-neon: #ff66cc; 
     --teks-putih: #ffffff;
 }
 
@@ -17,19 +17,20 @@
     scroll-behavior: smooth;
 }
 
+/* KUNCI LAYAR ANTI-GESER & ANTI-MELUBER */
 html, body {
     background-color: var(--hitam-pekat);
     color: var(--teks-putih);
     line-height: 1.6;
-    overflow-x: hidden; /* Mencegah halaman bisa digeser/zoom ke samping */
-    width: 100%;
+    overflow-x: hidden; /* Mencegah halaman bisa digeser ke samping */
+    width: 100%;        /* Memaksa lebar halaman pas 100% layar */
 }
 
 .text-pink { color: var(--pink-neon); }
 .text-cyan { color: var(--biru-cyan); }
 
 /* =========================================
-   2. NAVIGASI (NAVBAR)
+   2. NAVIGASI
    ========================================= */
 nav {
     display: flex;
@@ -41,23 +42,23 @@ nav {
     top: 0;
     z-index: 1000;
     border-bottom: 2px solid var(--biru-cyan);
-    transition: all 0.4s ease;
+    transition: all 0.4s ease; 
 }
 
 .logo img {
-    height: 80px;
+    height: 80px; 
     width: auto;
     display: block;
-    transition: height 0.4s ease;
+    transition: height 0.4s ease; 
 }
 
 nav.nav-scrolled {
-    padding: 5px 50px;
-    background-color: rgba(0, 0, 0, 0.98);
+    padding: 5px 50px; 
+    background-color: rgba(0, 0, 0, 0.98); 
 }
 
 nav.nav-scrolled .logo img {
-    height: 60px;
+    height: 60px; 
 }
 
 .nav-links {
@@ -78,7 +79,7 @@ nav.nav-scrolled .logo img {
 }
 
 /* =========================================
-   3. HERO SECTION (BERANDA)
+   3. HERO SECTION (FOTO PRIBADI PS5)
    ========================================= */
 .hero {
     height: 80vh;
@@ -86,18 +87,19 @@ nav.nav-scrolled .logo img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* Background foto pribadi dengan overlay gelap */
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('image/ps5-hero.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
     padding: 0 20px;
-    width: 100%;
+    width: 100%; /* Memaksa kotak hero membentang penuh */
 }
 
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5); 
 }
 
 .hero p {
@@ -124,7 +126,7 @@ nav.nav-scrolled .logo img {
 }
 
 /* =========================================
-   4. SEWA DI TEMPAT (KOTAK HARGA PER JAM)
+   4. SEWA DI TEMPAT (PRICING)
    ========================================= */
 .pricing, .location {
     padding: 80px 50px;
@@ -141,15 +143,15 @@ nav.nav-scrolled .logo img {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Jurus Fleksibel 1 */
+    flex-wrap: wrap; 
 }
 
 .card {
     background-color: var(--abu-gelap);
     padding: 90px 30px 30px; 
     border-radius: 15px;
-    width: 100%;             /* Jurus Fleksibel 2 */
-    max-width: 300px;        /* Jurus Fleksibel 2 */
+    width: 100%;             
+    max-width: 300px;        
     border: 1px solid #333;
     transition: all 0.3s ease;
     position: relative;
@@ -210,7 +212,6 @@ nav.nav-scrolled .logo img {
     transform: scale(1.05);
 }
 
-/* Gambar Konsol Melayang (Kode Dobel Sudah Dihapus) */
 .konsol-img {
     position: absolute;
     height: 140px; 
@@ -233,6 +234,11 @@ nav.nav-scrolled .logo img {
 .harga-header {
     text-align: center;
     padding: 50px 20px;
+}
+
+.header-icon {
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .harga-header h1 {
@@ -263,15 +269,15 @@ nav.nav-scrolled .logo img {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* Jurus Fleksibel 1 */
+    flex-wrap: wrap; 
 }
 
 .home-card {
     background-color: #1e1e1e;
     border-radius: 30px;
     padding: 30px;
-    width: 100%;             /* Jurus Fleksibel 2 */
-    max-width: 320px;        /* Jurus Fleksibel 2 */
+    width: 100%;             
+    max-width: 320px;        
     border: 2px solid #333;
     position: relative;
 }
@@ -343,7 +349,7 @@ nav.nav-scrolled .logo img {
 }
 
 /* =========================================
-   6. HALAMAN KATALOG GAME (FRONT-END)
+   6. HALAMAN KATALOG GAME 
    ========================================= */
 .filter-section {
     background-color: var(--abu-gelap);
@@ -465,7 +471,7 @@ nav.nav-scrolled .logo img {
 .badge.ps3 { background-color: #333; color: white; border: 1px solid #666; }
 
 /* =========================================
-   7. LOKASI PETA
+   7. LOKASI PETA & FOOTER
    ========================================= */
 .map-container {
     margin-top: 20px;
@@ -474,9 +480,6 @@ nav.nav-scrolled .logo img {
     border: 2px solid var(--biru-cyan);
 }
 
-/* =========================================
-   8. FOOTER 4 KOLOM
-   ========================================= */
 footer {
     background-color: var(--abu-gelap);
     padding: 60px 50px 20px; 
@@ -553,10 +556,10 @@ footer {
 }
 
 /* =========================================
-   HALAMAN SYARAT & KETENTUAN (TEKS)
+   8. HALAMAN SYARAT & KETENTUAN
    ========================================= */
 .page-content {
-    padding: 140px 50px 80px; /* Jarak aman dari navbar yang lengket di atas */
+    padding: 140px 50px 80px; 
     max-width: 900px;
     margin: 0 auto;
 }
@@ -599,76 +602,17 @@ footer {
     color: var(--teks-putih);
 }
 
-/* Responsif untuk layar HP khusus halaman S&K */
-@media (max-width: 768px) {
-    .page-content {
-        padding: 120px 20px 50px;
-    }
-    .text-box {
-        padding: 25px;
-    }
-}
-
-/* =========================================
-   9. RESPONSIVE DESIGN (HANDPHONE & TABLET)
-   ========================================= */
+/* KITA TETAP PERTAHANKAN MEDIA QUERY 900PX INI 
+   AGAR FOOTER TIDAK SALING BERTABRAKAN HANCUR SAAT LAYAR SEMPIT */
 @media (max-width: 900px) {
-    /* Tablet: Footer berubah jadi 1 kolom agar tidak terlalu sempit */
     .footer-container {
         grid-template-columns: 1fr; 
         text-align: center;
         gap: 40px;
     }
-    .footer-col h4 { justify-content: center; }
-    .payment-logos { justify-content: center; }
+    .footer-col h4, .payment-logos {
+        justify-content: center;
+    }
 }
-
-@media (max-width: 768px) {
-    /* --- 1. Navigasi (Tetap Menyamping Sebaris) --- */
-    nav {
-        padding: 15px 20px;
-        flex-direction: row; /* Memaksa tetap menyamping seperti desktop */
-        justify-content: space-between;
-        gap: 0;
-    }
-    
-    /* Memperkecil padding saat di-scroll di HP */
-    nav.nav-scrolled {
-        padding: 8px 20px; 
-    }
-
-    .logo img { 
-        height: 35px; /* Logo diperkecil agar ruang teks lebih lega */
-    }
-    
-    nav.nav-scrolled .logo img {
-        height: 30px;
-    }
-
-    .nav-links { 
-        gap: 15px; /* Jarak antar menu sedikit dirapatkan */
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem; /* Ukuran teks disesuaikan agar tidak turun ke bawah */
-    }
-    .logo img { height: 40px; }
-    .nav-links { font-size: 0.9rem; gap: 15px;}
-    
-    .hero { margin-top: 80px; }
-    .hero h1 { font-size: 2.5rem; }
-    
-    .pricing, .location, .home-rental, .filter-section, .game-katalog, footer {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .cards { margin-top: 50px; }
-    .konsol-img {
-        height: 110px; 
-        top: -55px;
-    }
-
-    .harga-header { margin-top: 140px; }
-    .harga-header h1 { font-size: 3rem; }
-}
+/* CATATAN: Kode @media (max-width: 768px) KHUSUS HP sudah saya HAPUS 
+   sesuai permintaanmu agar tampilannya sama persis seperti desktop */
