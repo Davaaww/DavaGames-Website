@@ -1,8 +1,4 @@
-// ==========================================
-// DATABASE MINI DAVA GAMES (FULL FRONT-END)
-// ==========================================
-// Tambahkan, hapus, atau ubah game-mu di dalam sini:
-
+// DATA GAME KAMU
 const gamesData = [
     { 
         title: "GTA V", 
@@ -11,232 +7,302 @@ const gamesData = [
         img: "image/listgame/Gta5.jpg" 
     },
     { 
+        title: "Astro Playroom", 
+        console: ["ps5"], 
+        genre: "adventure",
+        img: "image/listgame/AstroPlayroom.jpg" 
+    },
+    { 
         title: "FC 26", 
         console: ["ps4", "ps5"], 
-        genre: "sports", 
+        genre: "sports",
         img: "image/listgame/FC 26.jpeg" 
     },
     { 
-        title: "Tekken 8", 
+        title: "Efootball",
         console: ["ps5"], 
-        genre: "fighting", 
-        img: "image/listgame/Tekken 8.jpeg" 
-    },
-    { 
-        title: "EFootball", 
-        console: ["ps5"], 
-        genre: "sports", 
+        genre: "sports",
         img: "image/listgame/efootball.png" 
-    },
-    { 
-        title: "Astro Playroom", 
-        console: ["ps5"], 
-        genre: "adventure", 
-        img: "image/listgame/AstroPlayroom.jpg" 
     },
     { 
         title: "Human Fall Flat", 
         console: ["ps5"], 
-        genre: "adventure", 
+        genre: "adventure",
         img: "image/listgame/Humanfallflate.jpeg" 
     },
     { 
         title: "NBA 2K26", 
         console: ["ps5"], 
-        genre: "sports", 
+        genre: "sports",
         img: "image/listgame/Nba2k26.jpeg" 
     },
     { 
         title: "Naruto Storm Connection", 
         console: ["ps5"], 
-        genre: "action", 
+        genre: "fighting",
         img: "image/listgame/Narutostorm.png" 
-    },
-    { 
-        title: "Moto GP 25", 
-        console: ["ps5"], 
-        genre: "sports", 
-        img: "image/listgame/Motogp25.jpg" 
-    },
-    { 
-        title: "Rabbids Party Legend", 
-        console: ["ps4" ,"ps5"], 
-        genre: "action", 
-        img: "image/listgame/Rabbidsparty.jpg"
-    },
-    { 
-        title: "Sackboy", 
-        console: ["ps5"], 
-        genre: "action", 
-        img: "image/listgame/Sackboy.jpeg" 
     },
     { 
         title: "Undisputed", 
         console: ["ps5"], 
-        genre: "fighting", 
+        genre: "sports",
         img: "image/listgame/Undisputed.jpg" 
     },
-    { 
-        title: "PES Bitbox 2026", 
-        console: ["ps4"], 
-        genre: "sports", 
-        img: "image/listgame/Ps4-Pesbitbpx.jpeg" 
+    {
+        title: "Tekken 8", 
+        console: ["ps5"], 
+        genre: "fighting",
+        img: "image/listgame/Tekken 8.jpeg" 
     },
     { 
-        title: "It Takes Two", 
-        console: ["ps4"], 
-        genre: "adventure", 
-        img: "image/listgame/ps4-Ittakestwo.png" 
+        title: "Sackboy", 
+        console: ["ps5"], 
+        genre: "adventure",
+        img: "image/listgame/Sackboy.jpeg" 
     },
     { 
-        title: "Naruto Ultimate Ninja Storm 4", 
-        console: ["ps4"], 
-        genre: "Action", 
-        img: "image/listgame/ps4-narutostorm4.jpg" 
+        title: "UFC 5", 
+        console: ["ps5"], 
+        genre: "fighting",
+        img: "image/listgame/ps5-ufc5.jpeg" 
+    },
+    { 
+        title: "F1 25", 
+        console: ["ps5"], 
+        genre: "adventure",
+        img: "image/listgame/ps5-f125.jpeg" 
+    },
+    { 
+        title: "Rabbids Party", 
+        console: ["ps4", "ps5"], 
+        genre: "action",
+        img: "image/listgame/Rabbidsparty.jpg" 
+    },
+    { 
+        title: "Minecraft", 
+        console: ["ps4", "ps3"], 
+        genre: "adventure",
+        img: "image/listgame/minecraft.png" 
     },
     { 
         title: "Ultraman FE 3", 
         console: ["ps4"], 
-        genre: "Action", 
+        genre: "fighting",
         img: "image/listgame/ps4-Ultramanfe3.jpg" 
     },
     { 
-        title: "Call Of Duty Modern Warfare", 
+        title: "PES Bitbox", 
         console: ["ps4"], 
-        genre: "action", 
-        img: "image/listgame/ps4-Codmw.jpg" 
+        genre: "sports",
+        img: "image/listgame/Ps4-Pesbitbpx.jpeg" 
+    },
+    { 
+        title: "Naruto Ultimate Ninja Storm 4", 
+        console: ["ps4"], 
+        genre: "sports",
+        img: "image/listgame/ps4-narutostorm4.jpg" 
+    },
+    { 
+        title: "It Takes Two", 
+        console: ["ps4", "ps5"], 
+        genre: "adventure",
+        img: "image/listgame/ps4-Ittakestwo.png" 
     },
     { 
         title: "Dragonball Xenoverse", 
         console: ["ps4"], 
-        genre: "fighting", 
+        genre: "fighting",
         img: "image/listgame/ps4-dragonball.jpg" 
-    },
-    { 
-        title: "Unravel 2", 
-        console: ["ps4"], 
-        genre: "adventure", 
-        img: "image/listgame/ps4-Unravel2.jpg" 
-    },
-    { 
-        title: "Minecraft", 
-        console: ["ps3", "ps4"], 
-        genre: "adventure", 
-        img: "image/listgame/minecraft.png" 
-    },
-    { 
-        title: "WWE", 
-        console: ["ps3", "ps4"], 
-        genre: "fighting", 
-        img: "image/listgame/ps4-wwe.jpg" 
     },
     { 
         title: "CTR", 
         console: ["ps4"], 
-        genre: "racing", 
+        genre: "sports",
         img: "image/listgame/ps4-Ctr.jpg" 
+    },
+    { 
+        title: "COD Modern Warfare", 
+        console: ["ps4"], 
+        genre: "action",
+        img: "image/listgame/ps4-Codmw.jpg" 
+    },
+    { 
+        title: "Unravel 2", 
+        console: ["ps4"], 
+        genre: "adventure",
+        img: "image/listgame/ps4-Unravel2.jpg" 
+    },
+    { 
+        title: "WWE 2K25", 
+        console: ["ps4", "ps3"], 
+        genre: "sports",
+        img: "image/listgame/ps4-wwe.jpg" 
+    },
+    { 
+        title: "NBA 2K25", 
+        console: ["ps4"], 
+        genre: "sports",
+        img: "image/listgame/ps4-Nba2k25.jpg" 
     },
     { 
         title: "PES Gembox", 
         console: ["ps3"], 
-        genre: "sports", 
+        genre: "sports",
         img: "image/listgame/ps3-Pesgembox.jpg" 
     },
     { 
         title: "Sengoku Basara", 
         console: ["ps3"], 
-        genre: "action", 
+        genre: "action",
         img: "image/listgame/ps3-basara.png" 
     },
     { 
-        title: "", 
-        console: ["ps5"], 
-        genre: "", 
-        img: "image/listgame/" 
+        title: "WWE 2K16", 
+        console: ["ps3"], 
+        genre: "fighting",
+        img: "image/listgame/ps3-wwe2k16.jpg" 
     },
     { 
-        title: "", 
-        console: ["ps5"], 
-        genre: "", 
-        img: "image/listgame/" 
+        title: "Moto GP", 
+        console: ["ps3"], 
+        genre: "sports",
+        img: "image/listgame/ps3-motogp.jpg" 
     },
     { 
-        title: "", 
-        console: ["ps5"], 
-        genre: "", 
-        img: "image/listgame/" 
+        title: "Lego Marvel", 
+        console: ["ps3"], 
+        genre: "adventure",
+        img: "image/listgame/ps3-Legomarvel.png" 
     },
     { 
-        title: "", 
-        console: ["ps5"], 
-        genre: "", 
-        img: "image/listgame/" 
+        title: "Tekken 6", 
+        console: ["ps3"], 
+        genre: "fighting",
+        img: "image/listgame/ps3-Tekken6.jpeg" 
+    },
+    { 
+        title: "Army Of Two", 
+        console: ["ps3"], 
+        genre: "action",
+        img: "image/listgame/ps3-aot.jpeg" 
+    },
+    {
+        title: "GTA 4", 
+        console: ["ps3"], 
+        genre: "action",
+        img: "image/listgame/ps3-gta4.jpg" 
+    },
+    { 
+        title: "NBA 2K18", 
+        console: ["ps3"], 
+        genre: "sports",
+        img: "image/listgame/ps3-Nba2k18.jpg" 
+    },
+    { 
+        title: "Blur", 
+        console: ["ps3"], 
+        genre: "sports",
+        img: "image/listgame/ps3-blur.jpg" 
+    },
+    { 
+        title: "God Of War 3", 
+        console: ["ps3"], 
+        genre: "action",
+        img: "image/listgame/ps3-gow3.jpg" 
+    },
+    { 
+        title: "Red Dead Redemption", 
+        console: ["ps3"], 
+        genre: "adventure",
+        img: "image/listgame/ps3-rdr.jpg" 
+    },
+    { 
+        title: "Portal", 
+        console: ["ps3"], 
+        genre: "adventure",
+        img: "image/listgame/ps3-portal.jpg" 
     }
-    // Ingat: Jika ingin menambah game baru di bawah,
-    // jangan lupa beri tanda koma (,) di kurung kurawal sebelumnya!
+    
 ];
 
-// ==========================================
-// LOGIKA SISTEM (TIDAK PERLU DIUBAH)
-// ==========================================
+// html element
+const gameListContainer = document.getElementById('game-list');
+const consoleFilter = document.getElementById('console');
+const genreFilter = document.getElementById('genre');
+const searchInput = document.getElementById('search');
 
-const gridContainer = document.getElementById('game-grid');
-const noGameMsg = document.getElementById('no-game-msg');
-const consoleFilter = document.getElementById('console-filter');
-const genreFilter = document.getElementById('genre-filter');
-const searchInput = document.getElementById('search-input');
+function renderGames(games) {
+    gameListContainer.innerHTML = '';
 
-// Cek URL untuk otomatis memfilter jika datang dari halaman depan
-const urlParams = new URLSearchParams(window.location.search);
-const consoleQuery = urlParams.get('console');
-if (consoleQuery) {
-    consoleFilter.value = consoleQuery.toLowerCase();
+    // if game not found
+    if (games.length === 0) {
+        gameListContainer.innerHTML = '<p style="color:#888; grid-column: 1/-1; text-align:center; font-family:var(--font-huge); margin-top:50px;">GAME TIDAK DITEMUKAN.</p>';
+        return;
+    }
+
+    // show game
+    games.forEach(game => {
+        // badge console
+        let badgesHTML = '';
+        game.console.forEach(cons => {
+            if (cons.toLowerCase() === 'ps5') {
+                badgesHTML += `<span class="g-badge ps5">PS5</span> `;
+            } else if (cons.toLowerCase() === 'ps4') {
+                badgesHTML += `<span class="g-badge ps4">PS4</span> `;
+            } else if (cons.toLowerCase() === 'ps3') {
+                badgesHTML += `<span class="g-badge" style="background:#333; color:white;">PS3</span> `;
+            }
+        });
+
+        // html struct
+        const gameHTML = `
+            <div class="g-item">
+                <img src="${game.img}" alt="${game.title}">
+                <div class="g-info">
+                    <h4>${game.title.toUpperCase()}</h4>
+                    <div>${badgesHTML}</div>
+                </div>
+            </div>
+        `;
+        
+        gameListContainer.innerHTML += gameHTML;
+    });
 }
 
-// Fungsi Utama: Menampilkan dan Menyaring Game
-function renderGames() {
-    const selectedConsole = consoleFilter.value;
-    const selectedGenre = genreFilter.value;
-    const searchText = searchInput.value.toLowerCase();
+// filter game
+function filterGames() {
+    const selectedConsole = consoleFilter.value.toLowerCase();
+    const selectedGenre = genreFilter.value.toLowerCase();
+    const searchQuery = searchInput.value.toLowerCase();
 
-    gridContainer.innerHTML = ''; 
+    const filtered = gamesData.filter(game => {
+        // Chek Console
+        const matchConsole = selectedConsole === 'all' || game.console.some(c => c.toLowerCase() === selectedConsole);
+        
+        // Chek Genre
+        const matchGenre = selectedGenre === 'all' || game.genre.toLowerCase().includes(selectedGenre);
 
-    const filteredGames = gamesData.filter(game => {
-        const matchConsole = selectedConsole === 'all' || game.console.includes(selectedConsole);
-        const matchGenre = selectedGenre === 'all' || game.genre === selectedGenre;
-        const matchSearch = game.title.toLowerCase().includes(searchText);
+        // Chek Search Teks
+        const matchSearch = game.title.toLowerCase().includes(searchQuery);
+
+        // fullfill the need
         return matchConsole && matchGenre && matchSearch;
     });
 
-    if (filteredGames.length === 0) {
-        noGameMsg.style.display = 'block';
-    } else {
-        noGameMsg.style.display = 'none';
-        
-        filteredGames.forEach(game => {
-            let badgesHTML = '';
-            game.console.forEach(c => {
-                badgesHTML += `<span class="badge ${c}">${c.toUpperCase()}</span>`;
-            });
-
-            const card = document.createElement('div');
-            card.classList.add('game-card-item');
-            card.innerHTML = `
-                <img src="${game.img}" alt="${game.title}" class="game-cover">
-                <div class="game-info-overlay">
-                    <h3 class="game-title">${game.title}</h3>
-                    <div>${badgesHTML}</div>
-                </div>
-            `;
-            gridContainer.appendChild(card);
-        });
-    }
+    renderGames(filtered); // print
 }
 
-// Tombol Filter & Search agar langsung jalan saat diklik/diketik
-consoleFilter.addEventListener('change', renderGames);
-genreFilter.addEventListener('change', renderGames);
-searchInput.addEventListener('input', renderGames);
+// run filter
+consoleFilter.addEventListener('change', filterGames);
+genreFilter.addEventListener('change', filterGames);
+searchInput.addEventListener('input', filterGames);
 
-// Langsung tampilkan game saat website pertama kali dibuka
-renderGames();
+// auto using filter from home
+const urlParams = new URLSearchParams(window.location.search);
+const consoleParam = urlParams.get('console');
+
+if (consoleParam) {
+    consoleFilter.value = consoleParam;
+}
+
+filterGames();

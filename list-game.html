@@ -2,28 +2,35 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Game | Dava Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dava Games | Game Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="logo">
-            <a href="index.html"><img src="image/logo.png" alt="Logo Dava Games"></a>
+            <a href="index.html">
+                <img src="image/logo.png" alt="Logo Dava Games">
+            </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Kembali ke Beranda</a></li>
-        </ul>
+        <a href="harga.html" class="nav-btn">Kembali</a>
     </nav>
+
+    <header class="hero" style="min-height: auto; padding: 120px 20px 50px;">
+        <div class="huge-text-bg" style="position: relative; top: 0; left: 0; transform: none;">
+            <div class="text-pink">GAME</div>
+            <div class="text-cyan" style="margin-top: -15px;">LIST</div>
+        </div>
+    </header>
 
     <section class="filter-section">
         <div class="filter-container">
-            
             <div class="filter-box">
-                <label>Console</label>
-                <select id="console-filter">
-                    <option value="all">Semua Konsol</option>
+                <label for="console">Console</label>
+                <select id="console">
+                    <option value="all">Semua Console</option>
                     <option value="ps5">PlayStation 5</option>
                     <option value="ps4">PlayStation 4</option>
                     <option value="ps3">PlayStation 3</option>
@@ -31,40 +38,34 @@
             </div>
 
             <div class="filter-box">
-                <label>Genre</label>
-                <select id="genre-filter">
+                <label for="genre">Genre</label>
+                <select id="genre">
                     <option value="all">Semua Genre</option>
                     <option value="action">Action / Adventure</option>
-                    <option value="sports">Sports</option>
-                    <option value="rpg">RPG</option>
+                    <option value="sports">Sports / Racing</option>
                     <option value="fighting">Fighting</option>
-                    <option value="racing">Racing</option>
+                    <option value="party">Party / Family</option>
+                    <option value="rpg">RPG</option>
                 </select>
             </div>
 
             <div class="search-box">
                 <div class="search-icon">🔍</div>
-                <input type="text" id="search-input" placeholder="Cari nama game...">
+                <input type="text" id="search" placeholder="Cari nama game...">
             </div>
-
         </div>
     </section>
 
     <section class="game-katalog">
-        <div id="game-grid" class="game-grid">
+        <div class="game-grid" id="game-list">
             </div>
-        
-        <div id="no-game-msg" style="display: none; text-align: center; width: 100%; color: #888; padding: 50px;">
-            <h3>Game tidak ditemukan. Coba kata kunci lain.</h3>
-        </div>
     </section>
 
-    <footer id="kontak">
-        <div class="footer-bottom" style="border-top: none;">
-            <p>© 2026 Dava Games. All rights reserved.</p>
-        </div>
+    <footer>
+        <p class="copyright">© 2026 Dava Games. All rights reserved.</p>
     </footer>
 
     <script src="list-game.js"></script>
+
 </body>
 </html>

@@ -2,122 +2,150 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
-    <title>Harga Sewa | Dava Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dava Games | Price List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="logo">
-            <a href="index.html"><img src="image/logo.png" alt="Logo Dava Games"></a>
+            <a href="index.html">
+                <img src="image/logo.png" alt="Logo Dava Games">
+            </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
+        <a href="index.html" class="nav-btn">Beranda</a>
     </nav>
 
-    <header class="harga-header">
-        <h1>HARGA</h1>
-        <p>Pilih sesuai kebutuhan gamingmu!</p>
-    </header>
-
-    <section class="pricing" style="padding: 20px 50px;">
-        <h2 class="section-title">🎮 Sewa di Tempat</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="image/ps3.png" alt="PS3" class="konsol-img">
-                <h3>PlayStation 3</h3>
-                <p class="price">Rp 6.000 <span>/ jam</span></p>
-                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps3'">List Game</button>
-            </div>
-            <div class="card">
-                <img src="image/ps4.png" alt="PS4" class="konsol-img">
-                <h3>PlayStation 4</h3>
-                <p class="price">Rp 10.000 <span>/ jam</span></p>
-                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps4'">List Game</button>
-            </div>
-            <div class="card">
-                <img src="image/ps5.png" alt="PS5" class="konsol-img">
-                <h3>PlayStation 5</h3>
-                <p class="price">Rp 15.000 <span>/ jam</span></p>
-                <button class="btn-pesan" onclick="window.location.href='list-game.html?console=ps5'">List Game</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-rental">
-        <h2 class="section-title">🏠 Sewa ke Rumah</h2>
-        <div class="home-grid">
-            
-            <div class="home-card">
-                <div class="home-card-header">
-                    <h3>PS 3</h3>
-                    <span>👤 Dana Pelajar</span>
-                </div>
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 40.000 / 12 JAM</div>
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 60.000 / 24 JAM</div>
-            </div>
-
-            <div class="home-card best-seller">
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 115.000 / 12 JAM</div>
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 200.000 / 24 JAM</div>
-            </div>
-
-            <div class="home-card">
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 70.000 / 12 JAM</div>
-                <div class="price-pill" onclick="window.location.href='syarat.html'">RP 120.000 / 24 JAM</div>
-            </div>
-
-        </div>
-    </section>
-
-<footer id="kontak">
-        <div class="footer-container">
-            <div class="footer-col brand-col">
-                <img src="image/logo.png" alt="Logo Dava Games" class="footer-logo">
-                <h2 class="footer-tagline"><span class="text-pink">LEVEL UP</span><br><span class="text-cyan">YOUR GAME</span></h2>
-            </div>
-
-<div class="footer-col">
-                <div class="contact-item">
-                    <h4>📍 Office</h4>
-                    <p>Jl. Inerbang Raya No.25,<br>RT.10/RW.3, Batu Ampar,<br>Kec. Kramat Jati, Kota Jakarta Timur,<br>Daerah Khusus Ibukota Jakarta 13520</p>
-                </div>
-                
-                <div class="contact-item mt-3">
-                    <h4>⏰ Jam Operasional</h4>
-                    <p>Senin - Jumat: 13.00 - 18.00 WIB <br> Sabtu - Minggu: 10.00 - 19.00 WIB</p>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <div class="contact-item">
-                    <h4>✉️ Email</h4>
-                    <p>kemendage@gmail.com</p>
-                </div>
-                <div class="contact-item mt-3">
-                    <h4>📸 Instagram</h4>
-                    <p>@davagames.id</p>
-                </div>
-            </div>
-
-            <div class="footer-col payment-col">
-                <h4>Payment Partners</h4>
-                <div class="payment-logos">
-                    <img src="image/qris_logo.png" alt="QRIS" class="pay-img">
-                    <img src="image/bca.png" alt="BCA" class="pay-img">
-                    <img src="image/mandiri.png" alt="Mandiri" class="pay-img">
-                </div>
-            </div>
+    <header class="hero" style="min-height: 50vh;">
+        <div class="huge-text-bg">
+            <div class="text-pink">PRICE</div>
+            <div class="text-cyan" style="margin-top: -15px;">LIST</div>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2026 Dava Games. All rights reserved.</p>
-        </div>
-    </footer>
+    </header>
 
-    <script src="script.js"></script>
+    <section class="katalog-section">
+        <div class="section-header">
+            <h2>SEWA <span class="text-cyan">DI TEMPAT</span></h2>
+            <p>Main langsung di basecamp dengan fasilitas TV layar lebar dan ruangan nyaman.</p>
+        </div>
+
+        <div class="modern-cards">
+            <div class="m-card best-tier">
+                <div class="badge-tag">MYTHIC</div>
+                <div class="m-card-image">
+                    <img src="image/ps5.png" alt="PS5">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PLAYSTATION 5</h3>
+                    <p class="m-tier">PREMIUM EXPERIENCE</p>
+                    <div class="m-price">Rp 15.000 <span>/ jam</span></div>
+                    <ul class="m-features">
+                        <li>✓ 2 DualSense Controller</li>
+                        <li>✓ TV LED 55 Inch Smart</li>
+                        <li>✓ Tingkatan Mythic</li>
+                    </ul>
+                    <button class="m-btn btn-cyan" onclick="window.location.href='list-game.html?console=ps5'">List Game PS5</button>
+                </div>
+            </div>
+
+            <div class="m-card">
+                <div class="m-card-image">
+                    <img src="image/ps4.png" alt="PS4">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PLAYSTATION 4</h3>
+                    <p class="m-tier">LEGEND EXPERIENCE</p>
+                    <div class="m-price text-pink">Rp 10.000 <span>/ jam</span></div>
+                    <ul class="m-features">
+                        <li>✓ 2 DualShock Controller</li>
+                        <li>✓ TV LED 43 Inch</li>
+                        <li>✓ Tingkatan Legend</li>
+                    </ul>
+                    <button class="m-btn btn-pink" onclick="window.location.href='list-game.html?console=ps4'">List Game PS4</button>
+                </div>
+            </div>
+
+            <div class="m-card">
+                <div class="m-card-image">
+                    <img src="image/ps3.png" alt="PS3">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PLAYSTATION 3</h3>
+                    <p class="m-tier">EPIC EXPERIENCE</p>
+                    <div class="m-price">Rp 6.000 <span>/ jam</span></div>
+                    <ul class="m-features">
+                        <li>✓ 2 Controller Wireless</li>
+                        <li>✓ TV LED 32 Inch</li>
+                        <li>✓ Tingkatan Epic</li>
+                    </ul>
+                    <button class="m-btn btn-outline" onclick="window.location.href='list-game.html?console=ps3'">List Game PS3</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="katalog-section" style="background-color: #030303; border-top: 1px solid #111;">
+        <div class="section-header">
+            <h2>SEWA <span class="text-pink">KE RUMAH</span></h2>
+            <p>Bawa pulang keseruan konsol pilihanmu tanpa ribet, langsung kami antar ke depan pintu.</p>
+        </div>
+
+        <div class="modern-cards">
+            
+            <div class="m-card best-tier">
+                <div class="badge-tag">BEST SELLER</div>
+                <div class="m-card-image">
+                    <img src="image/ps5.png" alt="PS5">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PS5 HOME RENTAL</h3>
+                    <p class="m-tier">PENGALAMAN TERBAIK</p>
+                    <div class="m-price" style="font-size: 1.6rem;">Rp 115.000 <span style="font-size: 0.7rem;">/ 12 JAM</span></div>
+                    <div class="m-price" style="font-size: 1.6rem; margin-top: -5px; margin-bottom: 15px;">Rp 200.000 <span style="font-size: 0.7rem;">/ 24 JAM</span></div>
+                    <button class="m-btn btn-cyan" onclick="window.location.href='syarat.html'">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <div class="m-card">
+                <div class="m-card-image">
+                    <img src="image/ps4.png" alt="PS4">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PS4 HOME RENTAL</h3>
+                    <p class="m-tier">PILIHAN PALING NYAMAN</p>
+                    <div class="m-price text-pink" style="font-size: 1.6rem;">Rp 70.000 <span style="font-size: 0.7rem;">/ 12 JAM</span></div>
+                    <div class="m-price text-pink" style="font-size: 1.6rem; margin-top: -5px; margin-bottom: 15px;">Rp 120.000 <span style="font-size: 0.7rem;">/ 24 JAM</span></div>
+                    <button class="m-btn btn-pink" onclick="window.location.href='syarat.html'">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <div class="m-card">
+                <div class="m-card-image">
+                    <img src="image/ps3.png" alt="PS3">
+                </div>
+                <div class="m-card-content">
+                    <h3 class="m-title">PS3 HOME RENTAL</h3>
+                    <p class="m-tier">PILIHAN KLASIK & HEMAT</p>
+                    <div class="m-price" style="font-size: 1.6rem;">Rp 45.000 <span style="font-size: 0.7rem;">/ 12 JAM</span></div>
+                    <div class="m-price" style="font-size: 1.6rem; margin-top: -5px; margin-bottom: 15px;">Rp 80.000 <span style="font-size: 0.7rem;">/ 24 JAM</span></div>
+                    <button class="m-btn btn-outline" onclick="window.location.href='syarat.html'">Pesan Sekarang</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="footer-logo">DAVA<span class="text-pink">GAMES</span></h2>
+        <div class="footer-info">
+            <p>📍 Jl. Inerbang Raya No.25, Kramat Jati, Jakarta Timur</p>
+            <p>⏰ Senin-Jumat: 13.00-18.00 | Sabtu-Minggu: 10.00-19.00</p>
+            <p>📸 IG: @davagames.id | ✉️ kemendage@gmail.com</p>
+        </div>
+        <p class="copyright">© 2026 Dava Games. All rights reserved.</p>
+    </footer>
 </body>
 </html>

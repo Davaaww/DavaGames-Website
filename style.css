@@ -1,614 +1,590 @@
-/* =========================================
-   1. RESET & TEMA WARNA DAVA GAMES
-   ========================================= */
+/*Theme*/
 :root {
-    --hitam-pekat: #000000;
-    --abu-gelap: #111111;
-    --biru-cyan: #00b4ff; 
-    --pink-neon: #ff66cc; 
-    --teks-putih: #ffffff;
+    --bg-dark: #0a0a0a;
+    --text-light: #ffffff;
+    --cyan: #00b4ff;
+    --pink: #ff66cc;
+    --card-bg: #141414;
+    
+    /* Font Families */
+    --font-huge: 'Archivo Black', sans-serif;
+    --font-text: 'Inter', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent !important; 
 }
 
-/* KUNCI LAYAR ANTI-GESER & ANTI-MELUBER */
-html, body {
-    background-color: var(--hitam-pekat);
-    color: var(--teks-putih);
-    line-height: 1.6;
-    overflow-x: hidden; /* Mencegah halaman bisa digeser ke samping */
-    width: 100%;        /* Memaksa lebar halaman pas 100% layar */
+*:focus, *:active, *:hover {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.text-pink { color: var(--pink-neon); }
-.text-cyan { color: var(--biru-cyan); }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
 
-/* =========================================
-   2. NAVIGASI
-   ========================================= */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-text);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.text-pink { color: var(--pink); }
+.text-cyan { color: var(--cyan); }
+
+/* navbar header */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: sticky;
+    padding: 15px 25px;
+    position: absolute; 
     top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--biru-cyan);
-    transition: all 0.4s ease; 
+    width: 100%;
+    z-index: 100;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* logo size */
 .logo img {
-    height: 80px; 
+    height: 60px;
     width: auto;
     display: block;
-    transition: height 0.4s ease; 
+    transition: height 0.3s ease;
 }
 
-nav.nav-scrolled {
-    padding: 5px 50px; 
-    background-color: rgba(0, 0, 0, 0.98); 
-}
-
-nav.nav-scrolled .logo img {
-    height: 60px; 
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--teks-putih);
+.nav-btn {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+    padding: 8px 18px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: none;
 }
 
-.nav-links a:hover {
-    color: var(--pink-neon);
+.nav-katalog-title {
+    font-family: var(--font-huge);
+    font-size: 1.2rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-/* =========================================
-   3. HERO SECTION (FOTO PRIBADI PS5)
-   ========================================= */
+/* hero section */
 .hero {
-    height: 80vh;
+    position: relative;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* main text */
+.huge-text-bg {
+    position: absolute;
+    top: 38%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
-    /* Background foto pribadi dengan overlay gelap */
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('image/ps5-hero.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Mencegah gambar berulang */
-    padding: 0 20px;
-    width: 100%; /* Memaksa kotak hero membentang penuh */
+    font-family: var(--font-huge);
+    font-size: 18vw; 
+    line-height: 0.9;
+    letter-spacing: -1px;
+    z-index: 1;
+    white-space: nowrap;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(0, 180, 255, 0.5); 
+/* ps5 position */
+.center-object-wrapper {
+    position: absolute;
+    top: 65%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 160px; 
+    animation: float3D 5s ease-in-out infinite;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
+.center-3d-obj {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 30px 25px rgba(0, 180, 255, 0.4));
+}
+
+@keyframes float3D {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+
+.float-text {
+    position: absolute;
+    font-family: var(--font-huge);
+    font-size: 0.7rem;
+    color: #888;
+    z-index: 3;
+    letter-spacing: 1px;
+}
+
+.top-left {
+    top: 25%;
+    left: 20px;
+}
+
+.bottom-right {
+    top: 65%;
+    right: 20px;
+    text-align: right;
+}
+
+/* bottom text */
+.hero-desc {
+    position: absolute;
+    bottom: 40px; 
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-desc p {
+    font-size: 0.85rem;
     color: #cccccc;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto; 
 }
 
-.btn {
-    padding: 12px 30px;
-    background: linear-gradient(45deg, var(--pink-neon), var(--biru-cyan));
-    color: var(--teks-putih);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: inline-block;
+/* catalog section */
+.katalog-section {
+    padding: 60px 20px 40px;
+    background-color: #050505;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--biru-cyan);
-}
-
-/* =========================================
-   4. SEWA DI TEMPAT (PRICING)
-   ========================================= */
-.pricing, .location {
-    padding: 80px 50px;
+.section-header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.pricing h2, .location h2 {
-    margin-bottom: 40px;
-    color: var(--biru-cyan);
+.section-header h2 {
+    font-family: var(--font-huge);
     font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-.cards {
+.section-header p {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.modern-cards {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
-.card {
-    background-color: var(--abu-gelap);
-    padding: 90px 30px 30px; 
-    border-radius: 15px;            
-    width : 300px;       
-    border: 1px solid #333;
-    transition: all 0.3s ease;
+.m-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #222;
     position: relative;
-    margin-top: 50px; 
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--pink-neon);
-    box-shadow: 0 0 20px rgba(255, 102, 204, 0.3);
+.best-tier {
+    border: 1px solid #222;
+    background: linear-gradient(180deg, rgba(0,180,255,0.05) 0%, rgba(20,20,20,1) 100%);
 }
 
-.card h3 {
-    font-size: 1.8rem;
+.m-card-image img {
+    height: 100px;
+    object-fit: contain;
     margin-bottom: 15px;
-    color: var(--teks-putih);
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.8));
 }
 
-.price {
+.m-title {
+    font-family: var(--font-huge);
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.m-tier {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #666;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.m-price {
+    font-family: var(--font-huge);
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.best-tier .m-price {
+    color: var(--cyan);
+}
+
+.m-price.text-pink {
+    color: var(--pink);
+}
+
+.m-price span {
+    font-family: var(--font-text);
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.m-features {
+    list-style: none;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.m-features li {
+    font-size: 0.8rem;
+    color: #aaa;
+    padding: 5px 0;
+    border-bottom: 1px solid #222;
+}
+
+.m-btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-family: var(--font-huge);
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-cyan { background-color: var(--cyan); color: black; }
+.btn-pink { background-color: var(--pink); color: white; }
+.btn-outline { background-color: transparent; border: 2px solid white; color: white; }
+
+.badge-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--cyan);
+    color: black;
+    font-weight: 900;
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+/* footer */
+footer {
+    background-color: var(--bg-dark);
+    padding: 50px 20px 30px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-family: var(--font-huge);
     font-size: 2rem;
-    color: var(--pink-neon);
-    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.price span {
-    font-size: 1rem;
+.footer-info p {
+    font-size: 0.85rem;
     color: #888;
+    margin-bottom: 8px;
 }
 
-.card ul {
-    list-style: none;
-    margin-bottom: 30px;
-    text-align: left;
+.copyright {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #444;
 }
 
-.card ul li {
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #333;
+/* syarat.html page */
+.rules-content {
+    padding: 40px 20px;
 }
 
-.btn-pesan {
-    width: 100%;
-    padding: 12px;
-    background-color: #25D366; 
-    color: white;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-pesan:hover {
-    background-color: #1ebe57;
-    transform: scale(1.05);
-}
-
-.konsol-img {
-    position: absolute;
-    height: 140px; 
-    width: auto;   
-    top: -70px;    
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8)); 
-}
-
-.card:hover .konsol-img {
-    transform: translate(-50%, -10px) scale(1.05); 
-}
-
-/* =========================================
-   5. HALAMAN HARGA & SEWA KE RUMAH
-   ========================================= */
-.harga-header {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.header-icon {
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-.harga-header h1 {
-    font-size: 5rem;
-    color: white;
-    font-family: 'Arial Black', sans-serif;
-}
-
-.harga-header p {
-    color: #ccc;
-    font-size: 1.2rem;
-}
-
-.section-title {
-    text-align: center;
-    color: var(--biru-cyan);
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-
-.home-rental {
-    padding: 50px;
-    background-color: #000;
-}
-
-.home-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.home-card {
-    background-color: #1e1e1e;
-    border-radius: 30px;
+.rules-card {
+    background: var(--card-bg);
     padding: 30px;
-    width: 320px;                 
-    border: 2px solid #333;
-    position: relative;
+    border-radius: 20px;
+    border-left: 5px solid var(--pink);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.home-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+.rules-card h3 {
+    font-family: var(--font-huge);
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
-.home-card-header h3 {
-    font-size: 2.5rem;
-    color: white;
-}
-
-.home-card-header span {
+.rules-card p {
     font-size: 0.9rem;
     color: #aaa;
+    line-height: 1.6;
 }
 
-.price-pill {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    border-radius: 50px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-    border: 1px solid var(--biru-cyan);
-    cursor: pointer;
-    transition: 0.3s;
+.contact-box-modern {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
 }
 
-.price-pill:hover {
-    background-color: var(--biru-cyan);
-    color: black;
-}
-
-.best-seller {
-    background-color: #ffcc00; 
-    transform: scale(1.1);
-    z-index: 5;
-    border: none;
-}
-
-.best-seller .home-card-header h3, 
-.best-seller .home-card-header span {
-    color: black;
-}
-
-.best-seller .price-pill {
-    background-color: black;
-    color: #ffcc00;
-    border: none;
-}
-
-.badge-terbaik {
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-/* =========================================
-   6. HALAMAN KATALOG GAME 
-   ========================================= */
+/* filter game */
 .filter-section {
-    background-color: var(--abu-gelap);
-    padding: 30px 50px;
-    border-bottom: 1px solid #333;
+    padding: 20px 20px 30px;
+    background-color: var(--bg-dark);
 }
 
 .filter-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 15px;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .filter-box, .search-box {
-    background-color: #2a2a2a;
-    padding: 10px 20px;
-    border-radius: 30px;
     display: flex;
     align-items: center;
+    background: var(--card-bg);
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 10px 20px;
     gap: 10px;
+    flex-grow: 1; 
 }
 
 .filter-box label {
-    font-size: 0.8rem;
-    color: #aaa;
+    font-weight: 800;
+    color: #888;
+    font-size: 0.75rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.filter-box select, .search-box input {
+.filter-box select {
     background: transparent;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-family: var(--font-text);
+    font-weight: bold;
+    font-size: 0.9rem;
     outline: none;
+    width: 100%;
     cursor: pointer;
 }
 
+.filter-box select option {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
 .search-box {
-    background-color: #333;
+    background: white; 
+    border-color: white;
+    min-width: 250px;
 }
 
-.search-icon {
-    background-color: #ffcc00; 
+.search-box input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-family: var(--font-text);
+    font-weight: bold;
     color: black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    outline: none;
 }
 
+/* GRID game show 2 grid */
 .game-katalog {
-    padding: 40px 50px 80px;
-    min-height: 50vh;
+    padding: 0 20px 80px;
+    background-color: var(--bg-dark);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
 }
 
-.game-card-item {
-    background-color: #1e1e1e;
-    border-radius: 15px;
+.g-item {
+    background: #111;
+    border-radius: 12px;
     overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
 }
 
-.game-card-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.2);
-}
-
-.game-cover {
+.g-item img {
     width: 100%;
     aspect-ratio: 3 / 4; 
     object-fit: cover;
-    display: block;
 }
 
-.game-info-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 15px 15px;
-    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+.g-info {
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-.game-title {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.g-info h4 {
+    font-family: var(--font-huge);
+    font-size: 0.85rem; 
     color: white;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    line-height: 1.2;
 }
 
-.badge {
-    font-size: 0.7rem;
-    background-color: white;
-    color: black;
-    padding: 3px 6px;
+.g-badge {
+    font-size: 0.6rem;
+    padding: 2px 6px;
     border-radius: 4px;
     font-weight: bold;
-    margin-right: 5px;
+    display: inline-block;
 }
 
-.badge.ps5 { background-color: white; color: black; }
-.badge.ps4 { background-color: #00439c; color: white; }
-.badge.ps3 { background-color: #333; color: white; border: 1px solid #666; }
+.ps5 { background: white; color: black; }
+.ps4 { background: var(--cyan); color: white; }
 
-/* =========================================
-   7. LOKASI PETA & FOOTER
-   ========================================= */
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid var(--biru-cyan);
-}
-
-footer {
-    background-color: var(--abu-gelap);
-    padding: 60px 50px 20px; 
-    border-top: 1px solid #333;
-    color: var(--teks-putih);
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1fr; 
-    gap: 30px;
-    margin-bottom: 40px;
-    text-align: left; 
-}
-
-.footer-col h4 {
-    color: var(--teks-putih);
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-col p {
-    color: #aaaaaa;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 5px;
-}
-
-.footer-logo {
-    height: 70px; 
-    width: auto;
-    margin-bottom: 20px;
-}
-
-.footer-tagline {
-    font-size: 2rem;
-    line-height: 1.1;
-    letter-spacing: 1px;
-}
-
-.contact-item.mt-3 {
-    margin-top: 20px;
-}
-
-.payment-logos {
-    display: flex;
-    gap: 15px; 
-    flex-wrap: wrap;
-    align-items: center; 
-}
-
-.pay-img {
-    height: 30px; 
-    width: auto;
-    object-fit: contain;
-    background-color: white; 
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 25px;
-    border-top: 1px solid #333;
-}
-
-.footer-bottom p {
-    color: #666666;
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-/* =========================================
-   8. HALAMAN SYARAT & KETENTUAN
-   ========================================= */
-.page-content {
-    padding: 140px 50px 80px; 
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.text-box {
-    background-color: var(--abu-gelap);
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid #333;
-    line-height: 1.8;
-}
-
-.text-box h3 {
-    color: var(--pink-neon);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.text-box ul {
-    margin-left: 25px;
-    margin-bottom: 20px;
-    color: #ddd;
-}
-
-.text-box p {
-    color: #ddd;
-}
-
-.contact-box {
-    background-color: #222;
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 5px solid var(--biru-cyan);
-    margin-top: 20px;
-}
-
-.contact-box p {
-    margin: 8px 0;
-    font-size: 1.1rem;
-    color: var(--teks-putih);
-}
-
-/* KITA TETAP PERTAHANKAN MEDIA QUERY 900PX INI 
-   AGAR FOOTER TIDAK SALING BERTABRAKAN HANCUR SAAT LAYAR SEMPIT */
-@media (max-width: 900px) {
-    .footer-container {
-        grid-template-columns: 1fr; 
-        text-align: center;
-        gap: 40px;
+/* responsive mobile */
+@media (max-width: 768px) {
+    .logo img {
+        height: 45px; 
     }
-    .footer-col h4, .payment-logos {
+
+    .nav-katalog-title {
+        font-size: 0.8rem;
+    }
+}
+
+/* scaling for web */
+@media (min-width: 769px) {
+    .huge-text-bg {
+        font-size: 9vw; 
+        top: 32%; 
+    }
+    
+    /* 3d object */
+    .center-object-wrapper {
+        width: 260px; 
+        top: 66%; 
+    }
+
+    /* not blocking other */
+    .katalog-section {
+        position: relative; 
+        z-index: 20; 
+        background-color: var(--bg-dark); 
+        border-top: 1px solid #111;
+    }
+
+    /* space between section price */
+    .modern-cards {
+        flex-direction: row;
+        max-width: 1100px;
         justify-content: center;
+        gap: 30px;
+    }
+
+    .m-card {
+        width: 33%;
+        min-width: 300px; 
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .m-card-image img {
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    .m-title {
+        font-size: 1.8rem;
+    }
+
+    .m-price {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .m-features {
+        margin-bottom: 25px;
+    }
+
+    .m-features li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .m-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .hero-desc {
+        bottom: 50px;
+    }
+
+    .filter-section, .game-katalog {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .game-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .g-info h4 {
+        font-size: 1rem;
     }
 }
-/* CATATAN: Kode @media (max-width: 768px) KHUSUS HP sudah saya HAPUS 
-   sesuai permintaanmu agar tampilannya sama persis seperti desktop */
